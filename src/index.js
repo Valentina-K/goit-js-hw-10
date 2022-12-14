@@ -37,8 +37,10 @@ function parseRequest(parseData) {
     }    
 }
 
-function onError() {
-    Notiflix.Notify.failure('Oops, there is no country with that name');
+function onError(err) {    
+    if (err.message === '404') {
+        Notiflix.Notify.failure('Oops, there is no country with that name');
+    }   
 }
 
 function clearContent() {
