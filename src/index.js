@@ -7,7 +7,7 @@ const DEBOUNCE_DELAY = 300;
 const refs = {
     searchInput: document.querySelector('#search-box'),
     countryList: document.querySelector('.country-list'),
-    countryInfo: document.querySelector('.country-info')
+    countryInfo: document.querySelector('.country-info'),
 }
 
 refs.searchInput.addEventListener('input',debounce(onInput, DEBOUNCE_DELAY));
