@@ -40,6 +40,7 @@ function parseRequest(parseData) {
 function onError(err) {    
     if (err.message === '404') {
         Notiflix.Notify.failure('Oops, there is no country with that name');
+        clearContent();
     }   
 }
 
